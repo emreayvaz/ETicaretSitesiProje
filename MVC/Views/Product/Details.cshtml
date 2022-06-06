@@ -1,0 +1,14 @@
+﻿@model DataEntities.Model.Product
+@using BusinessLogicLayer
+@using DataEntities.Model
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    GenericRepository<Product> pRepo = new GenericRepository<Product>();
+    GenericRepository<ProductImages> pImgRepo = new GenericRepository<ProductImages>();
+}
+
+<h2>@Model.Name</h2>
+<img src="@Model.ImageUrlBig"/>
+

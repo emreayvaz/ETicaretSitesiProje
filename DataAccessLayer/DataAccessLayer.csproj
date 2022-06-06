@@ -56,6 +56,14 @@
     <Compile Include="Migrations\202206041148409_0406.designer.cs">
       <DependentUpon>202206041148409_0406.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206061040244_emrea.cs" />
+    <Compile Include="Migrations\202206061040244_emrea.designer.cs">
+      <DependentUpon>202206061040244_emrea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206061047160_emreem.cs" />
+    <Compile Include="Migrations\202206061047160_emreem.designer.cs">
+      <DependentUpon>202206061047160_emreem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -72,6 +80,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202206041148409_0406.resx">
       <DependentUpon>202206041148409_0406.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206061040244_emrea.resx">
+      <DependentUpon>202206061040244_emrea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206061047160_emreem.resx">
+      <DependentUpon>202206061047160_emreem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

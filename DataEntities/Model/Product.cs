@@ -33,6 +33,7 @@ namespace DataEntities.Model
         public virtual Category Category { get; set; }
 
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual ICollection<ProductImages> ProductImages { get; set; }
 
     }
 }

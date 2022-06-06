@@ -17,6 +17,7 @@ namespace DataAccessLayer.Context
         DbSet<Product> Products { get; set; }
         DbSet<Supplier> Suppliers { get; set; }
         DbSet<OrderDetail> OrderDetails { get; set; }
+        DbSet<ProductImages> ProductImages { get; set; }
 
     }
 }

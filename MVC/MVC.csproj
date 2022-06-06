@@ -121,6 +121,8 @@
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Customer\MusteriKayit.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Category\Details.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
