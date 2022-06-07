@@ -18,8 +18,9 @@ namespace DataEntities.Model
         public string Email { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
+        public string Password { get; set; }
 
-        
+
         public int? CityID { get; set; }
         [ForeignKey("CityID")]
         public virtual City City { get; set; }

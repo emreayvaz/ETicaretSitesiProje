@@ -10,5 +10,9 @@
 }
 
 <h2>@Model.Name</h2>
-<img src="@Model.ImageUrlBig"/>
+@foreach (var item in pImgRepo.GetAll().Where(x => x.ProductID == Model.ID))
+{
+    <img src="@item.ImageUrl" />
+}
+
 

@@ -64,6 +64,10 @@
     <Compile Include="Migrations\202206061047160_emreem.designer.cs">
       <DependentUpon>202206061047160_emreem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206071027264_password.cs" />
+    <Compile Include="Migrations\202206071027264_password.designer.cs">
+      <DependentUpon>202206071027264_password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206061047160_emreem.resx">
       <DependentUpon>202206061047160_emreem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206071027264_password.resx">
+      <DependentUpon>202206071027264_password.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
