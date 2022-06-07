@@ -3,16 +3,70 @@
 @using DataEntities.Model
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.Name+" "+Model.UnitPrice+"TL";
     Layout = "~/Views/Shared/_Layout.cshtml";
     GenericRepository<Product> pRepo = new GenericRepository<Product>();
     GenericRepository<ProductImages> pImgRepo = new GenericRepository<ProductImages>();
 }
 
-<h2>@Model.Name</h2>
-@foreach (var item in pImgRepo.GetAll().Where(x => x.ProductID == Model.ID))
-{
-    <img src="@item.ImageUrl" />
-}
+
+
+<div class="col-sm-6">
+    @*<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @foreach (var item in pImgRepo.GetAll().Where(x => x.ProductID == Model.ID))
+            {
+                if (true)
+                {
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="@item.ImageUrl" class="d-block w-100" alt="@item.Product.Name">
+                    </div>
+                }
+
+            }
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>*@
+    <img src="@Model.ImageUrlBig" />
+</div>
+<div class="col-sm-6">
+    <table class="table caption-top fs-4">
+        <tbody>
+            <tr>
+                <th scope="row">Model :</th>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <th scope="row">Fiyat :</th>
+                <td>@Model.UnitPrice TL</td>
+            </tr>
+            <tr>
+                <th scope="row">Stok :</th>
+                @if (Model.UnitsInStock > 0)
+                {
+                    <td>Var</td>
+                }
+                else
+                {
+                    <td>Yok</td>
+                }
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-warning me-md-2 fs-3" type="submit" >Sepete Ekle  <i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+</div>
+
+
+
 
 

@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\ProductDetailSlider.css" />
     <Content Include="css\StyleSheet1.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -137,7 +138,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Layout\" />
-    <Folder Include="Views\ProductDetail\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">

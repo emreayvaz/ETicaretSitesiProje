@@ -3,7 +3,7 @@
 @using DataEntities.Model
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.Name;
     Layout = "~/Views/Shared/_Layout.cshtml";
     GenericRepository<Product> pRepo = new GenericRepository<Product>();
 }

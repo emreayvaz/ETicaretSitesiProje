@@ -1,0 +1,65 @@
+﻿
+#div1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#div2 {
+    margin: 5px;
+}
+
+#div3 {
+    position: absolute;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 500px;
+}
+
+    #div3 > p {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        padding: 12px;
+        opacity: 0.6;
+        margin: 0px;
+    }
+
+span {
+    position: absolute;
+    width: 500px;
+    background-color: white;
+    opacity: 0.75;
+    line-height: 35px;
+    font-size: 20px;
+}
+
+center > div > i {
+    font-size: 60px;
+    cursor: pointer;
+}
+
+#imgBig {
+    height: 700px;
+    width: 500px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+li {
+    margin: 5px;
+}
+
+    li img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover; /*resmi çerçeveye fitler*/
+    }

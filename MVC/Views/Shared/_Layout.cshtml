@@ -11,10 +11,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="https://kit.fontawesome.com/85837175c8.js" crossorigin="anonymous"></script>
     <link href="~/css/StyleSheet1.css" rel="stylesheet" />
 </head>
 <body>
@@ -31,16 +32,9 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#">ANASAYFA <span class="sr-only"></span></a>
                         </li>
-                        @*<li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>*@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ÜRÜNLER</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                @*@RenderSection("kategoriler",false)*@
                                 @foreach (var item in cRepo.GetAll())
                                 {
                                     <a href="~/Category/Details/@item.ID">@item.Name</a>
