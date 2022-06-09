@@ -42,7 +42,22 @@
                             </div>
                         </li>
                     </ul>
-                    <div class="shopping-bag" style=" margin-right: 25px; margin-top: 5px;"><a href="~/Login/Index"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></div>
+                    @if (Session["UserName"] != null)
+                    {
+                        <ul class="my-navbar navbar-nav me-2">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link @*dropdown-toggle*@ shopping-bag" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-user"></i></a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a href="~/Login/Exit">ÇIKIŞ</a>
+                                </div>
+                            </li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="shopping-bag" style=" margin-right: 25px; margin-top: 5px;"><a href="~/Login/Index"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></div>
+
+                    }
                     <div class="shopping-bag"><a href="#"><i class="fas fa-shopping-bag"></i></a></div>
                 </div>
             </nav>

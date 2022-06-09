@@ -38,5 +38,11 @@ namespace MVC.Controllers
             return View();
         }
 
+        public ActionResult Exit()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }
