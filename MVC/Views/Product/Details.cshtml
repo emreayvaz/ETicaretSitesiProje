@@ -61,9 +61,11 @@
             </tr>
         </tbody>
     </table>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-warning me-md-2 fs-3" type="submit" >Sepete Ekle  <i class="fa-solid fa-cart-shopping"></i></button>
-    </div>
+    <form method="post">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a class="btn btn-warning me-md-2 fs-3" href="~/Product/Details/@Model.ID"><input type="submit" value="Sepete Ekle"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </form>
 </div>
 
 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace MVC.Controllers
 {
@@ -22,19 +23,18 @@ namespace MVC.Controllers
         {
             if (cRepo.GetAll().Where(c => c.UserName == username && c.Password == password).Count()==1)
             {
-                return RedirectToAction("BasariliGiris");
+                Customer customer = new Customer();
+                customer.UserName = username;
+                customer.Password = password;
+                FormsAuthentication.SetAuthCookie(customer.UserName, false);
+                Session["UserName"] = customer.UserName;
+                return RedirectToAction("Index", "Home");
             }
 
             return RedirectToAction("Error");
         }
         public ActionResult Error()
         {
-            return View();
-        }
-        public ActionResult BasariliGiris()
-        {
-            ViewBag.session = Session["user"];
-            ViewMasterPage master = new ViewMasterPage();
             return View();
         }
 

@@ -17,11 +17,18 @@ namespace MVC.Controllers
         {
             return View(repo.GetAll());
         }
-
+        [HttpGet]
         public ActionResult Details(int? id)
         {
             Product product = db.Set<Product>().Find(id);
             return View(product);
+        }
+
+        [HttpPost]
+        public ActionResult Details (int id)
+        {
+            Product product = repo.Get(id);
+            return RedirectToAction("Index", "Home");
         }
 
     }

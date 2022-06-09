@@ -1,10 +1,10 @@
 ﻿@using BusinessLogicLayer
 @using DataAccessLayer.Context
 @using DataEntities.Model
-@{ 
+@{
     Layout = null;
     GenericRepository<Category> cRepo = new GenericRepository<Category>();
-} 
+}
 
 <!DOCTYPE html>
 <html>
@@ -30,7 +30,7 @@
                     <ul class="navbar-nav"></ul>
                     <ul class="my-navbar navbar-nav ml-5 me-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">ANASAYFA <span class="sr-only"></span></a>
+                            <a class="nav-link" href="~/Home/Index" target="_parent">ANASAYFA <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ÜRÜNLER</a>
@@ -42,6 +42,7 @@
                             </div>
                         </li>
                     </ul>
+                    <div class="shopping-bag" style=" margin-right: 25px; margin-top: 5px;"><a href="~/Login/Index"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></div>
                     <div class="shopping-bag"><a href="#"><i class="fas fa-shopping-bag"></i></a></div>
                 </div>
             </nav>
