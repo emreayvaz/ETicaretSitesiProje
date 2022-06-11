@@ -1,9 +1,7 @@
 ﻿using BusinessLogicLayer;
 using DataEntities.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -13,6 +11,7 @@ namespace MVC.Controllers
     {
         // GET: Login
         GenericRepository<Customer> cRepo = new GenericRepository<Customer>();
+        List<Product> sepet = new List<Product>();
         [HttpGet]
         public ActionResult Index()
         {
@@ -23,26 +22,23 @@ namespace MVC.Controllers
         {
             if (cRepo.GetAll().Where(c => c.UserName == username && c.Password == password).Count()==1)
             {
-                Customer customer = new Customer();
-                customer.UserName = username;
-                customer.Password = password;
+                Customer customer = new Customer();              
+                customer = cRepo.GetAll().Where(c => c.UserName == username).FirstOrDefault();
                 FormsAuthentication.SetAuthCookie(customer.UserName, false);
-                Session["UserName"] = customer.UserName;
+                Session["UserId"] = customer.ID;
+                Session["Sepet"] = sepet;               
                 return RedirectToAction("Index", "Home");
             }
-
             return RedirectToAction("Error");
         }
         public ActionResult Error()
         {
             return View();
         }
-
         public ActionResult Exit()
         {
             Session.Abandon();
             return RedirectToAction("Index", "Home");
         }
-
     }
 }

@@ -13,23 +13,11 @@ namespace MVC.Controllers
     {
         GenericRepository<Product> repo = new GenericRepository<Product>();
         Context db = new Context();
-        public ActionResult Index()
-        {
-            return View(repo.GetAll());
-        }
         [HttpGet]
         public ActionResult Details(int? id)
         {
             Product product = db.Set<Product>().Find(id);
             return View(product);
         }
-
-        [HttpPost]
-        public ActionResult Details (int id)
-        {
-            Product product = repo.Get(id);
-            return RedirectToAction("Index", "Home");
-        }
-
     }
 }

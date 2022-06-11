@@ -11,14 +11,12 @@ namespace MVC.Controllers
 {
     public class CustomerController : Controller
     {
-        GenericRepository<Customer> repo = new GenericRepository<Customer>();
+        GenericRepository<Customer> cRepo = new GenericRepository<Customer>();
         GenericRepository<City> cityRepo = new GenericRepository<City>();
-        
         public ActionResult Index()
         {
-            return View(repo.GetAll());
+            return View(cRepo.GetAll());
         }
-
         [HttpGet]
         public ActionResult MusteriKayit()
         {
@@ -30,12 +28,11 @@ namespace MVC.Controllers
             ViewBag.Sehirler = sehirler;
             return View();
         }
-
         [HttpPost]
         public ActionResult MusteriKayit(Customer item)
         {
-                repo.Insert(item);
-                return RedirectToAction("Index");
+            cRepo.Update(item);
+            return RedirectToAction("Index");
         }
     }
 }

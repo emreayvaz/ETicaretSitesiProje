@@ -19,13 +19,11 @@ namespace MVC.Controllers
         {
             return View(repo.GetAll());
         }
-
         [HttpGet]
         public ActionResult Ekle()
         {
             return View();
         }
-
         [HttpPost]
         public ActionResult Ekle(Category item)
         {
@@ -36,7 +34,6 @@ namespace MVC.Controllers
             }
             return View(item);
         }
-
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -50,7 +47,5 @@ namespace MVC.Controllers
             }
             return View(category);
         }
-
-
     }
 }
